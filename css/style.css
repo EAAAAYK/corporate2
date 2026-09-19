@@ -1,0 +1,393 @@
+@charset 'utf-8';
+body {
+  background-color: #f0f0f0;
+}
+.container {
+  max-width: 1032px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+p,
+dt,
+dd {
+  font-size: 14px;
+}
+a {
+  color: #000;
+}
+.logo {
+  width: 100px;
+}
+img {
+  /*↓ aタグとのズレを解消できる ↓*/
+  vertical-align: bottom;
+}
+.logo img {
+  width: 100%;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+/*=============================================
+header
+==============================================*/
+header {
+  height: 80px;
+}
+.header-left {
+  max-width: 1032px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: left;
+}
+header .logo {
+  margin-right: 60px;
+  margin-left: 16px;
+}
+.header-left nav ul {
+  gap: 30px;
+}
+.header-left nav li {
+  font-size: 14px;
+}
+.header-right a {
+  display: inline-block;
+  width: 200px;
+  height: 80px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 80px;
+  text-align: center;
+}
+.header-right a:hover {
+  background-color: #333;
+}
+/*=============================================
+main
+=============================================*/
+.news .container,
+.about,
+.business .container,
+.company {
+  padding-top: 120px;
+}
+.section-title {
+  line-height: 1;
+  margin-bottom: 50px;
+}
+.section-title .en {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 36px;
+  letter-spacing: 0.3em;
+  font-weight: normal;
+}
+.section-title .ja {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 36px;
+}
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+/*mainvisual*/
+.mainvisual img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+}
+/*news*/
+.news li {
+  width: calc(100% / 3);
+  border-right: 1px solid #000;
+  padding: 10px 20px;
+}
+.news li:first-child {
+  padding-left: 0;
+}
+.news li:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+.news li div {
+  margin-bottom: 16px;
+}
+.news li div span {
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+.news li div time,
+.news li p {
+  font-size: 14px;
+}
+/*about*/
+.about {
+  width: 100%;
+}
+.about > .flex {
+  align-items: baseline;
+}
+.about .img {
+  width: 55%;
+}
+.about .img img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+.about-text {
+  width: 45%;
+  padding: 180px 5% 0;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+.about-text p {
+  line-height: 2.2;
+}
+/*business*/
+.business .flex {
+  padding: 0 10%;
+  justify-content: space-between;
+}
+.business-list-left,
+.business-list-right {
+  width: 46%;
+}
+.business-list-left {
+  margin-top: 100px;
+}
+.business-list-right {
+  margin-bottom: 100px;
+}
+.business-list__item:first-child {
+  margin-bottom: 50px;
+}
+.business-list__item img {
+  width: 100%;
+}
+.business-list__item p {
+  font-weight: bold;
+  margin: 0 0 10px 18px;
+  position: relative;
+}
+.business-list__item p::before {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: -18px;
+}
+/*company*/
+.company {
+  height: 750px;
+}
+.company .container {
+  position: relative;
+}
+.company .flex {
+  flex-wrap: wrap;
+}
+.company-text {
+  position: absolute;
+  background-color: #fff;
+  padding: 100px 8% 100px 6%;
+  top: 0;
+  left: 0;
+  width: 55%;
+}
+.company-img {
+  position: absolute;
+  top: 115px;
+  right: 0;
+  width: 53%;
+}
+.company dt {
+  width: 20%;
+  margin-top: 10px;
+}
+.company dt:first-of-type {
+  margin-top: 0;
+}
+.company dd {
+  width: 80%;
+  margin-top: 10px;
+}
+.company dd:first-of-type {
+  margin-top: 0;
+}
+.company .add {
+  margin-left: 20%;
+}
+.company-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+/*=============================================
+footer
+=============================================*/
+footer {
+  padding-bottom: 20px;
+  margin-top: 120px;
+  background-color: #fff;
+}
+footer .container > .flex {
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.copyright p {
+  font-size: 10px;
+}
+
+/*===========================================
+responsive
+===========================================*/
+@media screen and (max-width: 900px) {
+  .logo {
+    width: 80px;
+    margin: 8px 0;
+  }
+  .news .container,
+  .about,
+  .business .container,
+  .company {
+    padding-top: 80px;
+  }
+  header {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+  }
+  .header-left > .flex {
+    flex-direction: column;
+    align-items: normal;
+    margin: auto 0;
+  }
+  header .logo {
+    margin-left: 0;
+  }
+  .header-right a {
+    display: none;
+  }
+  .section-title {
+    margin-bottom: 34px;
+  }
+  .section-title .ja {
+    margin-bottom: 24px;
+  }
+  .news .flex {
+    flex-direction: column;
+  }
+  .news li {
+    width: 100%;
+    border-right: none;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  .about > .flex {
+    flex-direction: column;
+  }
+  .about .img {
+    height: 300px;
+    width: 100%;
+  }
+  .about .img img {
+    height: 300px;
+  }
+
+  .about-text {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 16px;
+  }
+  .business .flex {
+    flex-direction: column;
+    padding: 0;
+  }
+  .business-list-left,
+  .business-list-right {
+    width: 100%;
+    margin: 0;
+  }
+  .business-list-left {
+    margin-bottom: 30px;
+  }
+  .business-list__item:first-child {
+    margin-bottom: 30px;
+  }
+  .company {
+    height: auto;
+  }
+  .company > .flex {
+    flex-direction: column;
+  }
+  .company-text {
+    position: static;
+    width: 100%;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+  }
+  .company-img {
+    position: static;
+    width: 100%;
+  }
+  .company dt {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .company dd,
+  .company .add {
+    width: 100%;
+    padding-left: 14px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .company dd:first-of-type {
+    margin-top: 5px;
+  }
+  footer {
+    margin-top: 0;
+  }
+  footer .flex {
+    flex-direction: column;
+    align-items: normal;
+  }
+  footer .logo {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    display: block;
+  }
+  header > .flex {
+    margin: auto 0;
+    padding-top: 10px;
+  }
+  .header-left nav {
+    width: 100%;
+    overflow: hidden;
+  }
+  .header-left nav ul {
+    width: 100%;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+}
